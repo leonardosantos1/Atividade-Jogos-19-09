@@ -8,6 +8,9 @@ public class MoverRB : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private bool isGrounded = true;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip clip;
+
 
     public float velocidadeMax = 10.0f;
     public float forcaPulo = 5.0f;
@@ -115,6 +118,7 @@ public class MoverRB : MonoBehaviour
         if (collision.CompareTag("Item"))
         {
             cogumelos++;
+            _audioSource.PlayOneShot(clip);
             textoCogumelo.text = cogumelos.ToString();
             Destroy(collision.gameObject);
 
