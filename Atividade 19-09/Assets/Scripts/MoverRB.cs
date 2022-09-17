@@ -10,13 +10,15 @@ public class MoverRB : MonoBehaviour
     [SerializeField] private bool isGrounded = true;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip clip;
-
+    [SerializeField] private AudioClip yahoo;
+    [SerializeField] private AudioClip falling;
 
     public float velocidadeMax = 10.0f;
     public float forcaPulo = 5.0f;
 
     private Rigidbody rb;
     private float movX;
+    private bool alreadyPlayedSong = false;
 
     public int cogumelos = 0;
 
@@ -30,6 +32,7 @@ public class MoverRB : MonoBehaviour
         Time.timeScale = 1;
         rb = GetComponent<Rigidbody>();
         textoCogumelo.text = cogumelos.ToString();
+        alreadyPlayedSong = false;
     }
 
     private void Update()
@@ -45,7 +48,14 @@ public class MoverRB : MonoBehaviour
 
         }
 
-        if(transform.position.y < -10)
+        if (transform.position.y <= -1 && !alreadyPlayedSong)
+        {
+            alreadyPlayedSong = true;
+            _animator.SetTrigger("caindo");
+            _audioSource.PlayOneShot(falling);
+        }
+
+        if (transform.position.y < -10)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -91,6 +101,7 @@ public class MoverRB : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            _audioSource.PlayOneShot(yahoo);
             _animator.SetTrigger("pular");
             rb.AddForce(new Vector3(0, forcaPulo, 0), ForceMode.Impulse);
         }
