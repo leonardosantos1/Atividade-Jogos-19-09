@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 707, y: 471}
-  m_MaxSize: {x: 18002, y: 14021}
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 3973
+  controlID: 328
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,10 +145,10 @@ MonoBehaviour:
     y: 0
     width: 360
     height: 635
-  m_MinSize: {x: 230, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 231, y: 471}
+  m_MaxSize: {x: 10001, y: 14021}
   vertical: 1
-  controlID: 3929
+  controlID: 262
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 3862
+  controlID: 353
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -280,7 +280,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -425,9 +425,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c6ccffff
+      m_SelectedIDs: 7c0c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 4ad3ffff3cd4ffff
+      m_ExpandedIDs: 6cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -489,13 +489,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sounds
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/Sounds
+  - Assets/Scripts
   m_LastFoldersGridSize: 65
   m_LastProjectPath: C:\Users\walla\OneDrive\Documentos\TCC\Atividade-Jogos-19-09\Atividade
     19-09
@@ -503,9 +503,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e6650000
-    m_LastClickedID: 26086
-    m_ExpandedIDs: 00000000d665000000ca9a3b
+    m_SelectedIDs: 2e440000
+    m_LastClickedID: 17454
+    m_ExpandedIDs: 00000000f843000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -533,7 +533,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d665000000ca9a3b
+    m_ExpandedIDs: 00000000f843000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

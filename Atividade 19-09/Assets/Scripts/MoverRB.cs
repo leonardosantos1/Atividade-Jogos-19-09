@@ -10,15 +10,15 @@ public class MoverRB : MonoBehaviour
     [SerializeField] private bool isGrounded = true;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip clip;
-    [SerializeField] private AudioClip yahoo;
-    [SerializeField] private AudioClip falling;
+    [SerializeField] private AudioClip yahoo; //Variável armazenando o aúdio do Mario para quando ele pular
+    [SerializeField] private AudioClip falling; //Variável armazenando o aúdio do Mario para quando cair das plataformas
 
     public float velocidadeMax = 10.0f;
     public float forcaPulo = 5.0f;
 
     private Rigidbody rb;
     private float movX;
-    private bool alreadyPlayedSong = false;
+    private bool alreadyPlayedSong = false; //Variável que é utilizada para validar se ele já ativou o aúdio para n]ao ser ativado mais de uma vez
 
     public int cogumelos = 0;
 
@@ -48,11 +48,11 @@ public class MoverRB : MonoBehaviour
 
         }
 
-        if (transform.position.y <= -1 && !alreadyPlayedSong)
+        if (transform.position.y <= -1 && !alreadyPlayedSong) //Validação para ver se o Mario saiu da área de jogo e está caindo do mapa
         {
-            alreadyPlayedSong = true;
-            _animator.SetTrigger("caindo");
-            _audioSource.PlayOneShot(falling);
+            alreadyPlayedSong = true; //Colocando a variável como true para ele não entrar nessa validação novamente e ativar o aúdio varias vezes
+            _animator.SetTrigger("caindo"); //Ativando animação do Mario caindo
+            _audioSource.PlayOneShot(falling); //Ativando o som do Mario gritando
         }
 
         if (transform.position.y < -10)
@@ -101,7 +101,7 @@ public class MoverRB : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            _audioSource.PlayOneShot(yahoo);
+            _audioSource.PlayOneShot(yahoo); //Ativando o som do Mario falando yahoo
             _animator.SetTrigger("pular");
             rb.AddForce(new Vector3(0, forcaPulo, 0), ForceMode.Impulse);
         }
