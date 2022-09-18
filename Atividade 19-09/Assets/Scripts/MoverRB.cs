@@ -64,6 +64,8 @@ public class MoverRB : MonoBehaviour
         {
             Time.timeScale = 0;
             painelFimJogo.SetActive(true);
+            //Avisa o Audio MAnager que o jogo venceu
+            AudioManager.Instance.winner = true;
         }
         Movimentar();
         Pular();
@@ -139,6 +141,8 @@ public class MoverRB : MonoBehaviour
     public void JogarNovamente()
     {            
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //Avisa o Audio manager que o jogo não ganhou 
+        AudioManager.Instance.winner = false;
     }
 
    public void SairJogo()
