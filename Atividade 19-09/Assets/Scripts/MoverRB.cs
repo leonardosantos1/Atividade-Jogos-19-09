@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MoverRB : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    [SerializeField] private bool isGrounded = true;// variavel que realiza a verificação se o player está no chão ou não
+    [SerializeField] private bool isGrounded;// variavel que realiza a verificação se o player está no chão ou não
     [SerializeField] private AudioSource _audioSource; 
     [SerializeField] private AudioClip cogumelo; //Variável armazenando o aúdio do Cogumelo para quando o mario coletar
     [SerializeField] private AudioClip yahoo; //Variável armazenando o aúdio do Mario para quando ele pular
@@ -32,6 +32,7 @@ public class MoverRB : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         textoCogumelo.text = cogumelos.ToString();
         alreadyPlayedSong = false;
+        isGrounded = false;
     }
 
     private void Update()
