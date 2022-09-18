@@ -16,7 +16,7 @@ public class Inimigo : MonoBehaviour
     {
         
     }
-
+    //verificação para ver se o player colidiu com o objeto inimigo para reiniciar a fase
     private void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.tag)
