@@ -4633,7 +4633,7 @@ PrefabInstance:
       objectReference: {fileID: 726584912}
     - target: {fileID: 6946837908928555392, guid: 1b5fad0891aee424c98928aefbb763be, type: 3}
       propertyPath: velocidadeMax
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6946837908928555398, guid: 1b5fad0891aee424c98928aefbb763be, type: 3}
       propertyPath: m_Name
